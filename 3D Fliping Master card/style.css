@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+section{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #121321;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+
+}
+section::before{
+    content: " ";
+    position: absolute;
+   
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transform: translate(-200px, -100px);
+    background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+    
+
+
+}
+section::after{ 
+    content: " ";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transform: translate(200px, 100px);
+    background: linear-gradient(180deg, #9c27b0, #f3f5f5);
+    
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    z-index: 100;
+    transition: 1s;
+    transform-style: preserve-3d;
+      
+    
+}
+
+.container:hover{
+    transform: rotateY(180deg);
+}
+
+
+.container .card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter : blur(25px);
+    padding: 25px ;
+    border-radius:25px ;
+    background: rgba(255 , 255 , 255 , 0.1);
+    box-shadow: 0 25px 45px rgb(0, 0, 0,0.25) ;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backface-visibility: hidden;
+    
+
+}
+.Front-face header, 
+.Front-face .logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Front-face .logo img{
+    width: 48px;
+    /* padding-top: ; */
+    margin-right: 10px ;
+    
+
+}
+h6{
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+}
+h5{
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.Front-face .chip{
+    width: 50px;
+    /* transform: rotate(90deg); */
+
+}
+.Front-face .card-details{
+    margin-top: 40px ;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.name{
+    padding-top: 20px;
+}
+
+    
+
+.card.back-face{
+        /* margin-top: 86px; */
+    position: absolute;
+    /* right: 2px; */
+    padding: 15px 25px 25px 25px;
+    border: none;
+    transform: rotateY(180deg);
+    
+    backface-visibility: hidden;
+}
+ .card.back-face > h6{
+    font-size: 8px;
+ }
+.card.card.back-face .magnetic-strip{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    background: black;
+}
+.card.back-face .signature {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+   
+
+    margin-top: 80px ;
+    height: 40px;
+    width: 85%;
+    background-color: white;
+    border-radius: 6px;
+      background: repeating-linear-gradient(#fff,
+      #fff 3px,
+      #efefef 0px,
+      #efefef 9px);
+}
+ .valid-date{
+    justify-items: flex-end;
+    position: relative;
+    top: -35px;
+
+}
+
+
+
+
+.card.back-face .signature i{
+    color: black;
+    margin-right: -30px;
+    z-index: -1;
+    background-color: #fff;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 4px;
+
+}
+.card.back-face h5{
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+
+
+
